@@ -54,7 +54,7 @@ span img{
   transform: translateX(-50%);
   width: 100%;
   max-width: 400px;
-  z-index: 2;
+  z-index: 10000 !important;
   
 }
 
