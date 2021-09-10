@@ -115,7 +115,7 @@ function App() {
         </span>
       </h1>
 
-      <Search panTo={panTo} />
+
       <Locate panTo={panTo} />
 
       <GoogleMap
@@ -179,6 +179,7 @@ function App() {
 
         
       </GoogleMap>
+      <Search panTo={panTo} />
       <code>v0.9 ^BETA^</code>
     </div>
   );
