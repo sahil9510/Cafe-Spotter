@@ -65,9 +65,14 @@ span img{
   z-index: 10000 !important;
 }
 
-::ng-deep .pac-container { position: fixed !important;}
+[data-reach-combobox-popover],[data-reach-combobox-list],[data-reach-combobox-popover]{
+  position: absolute;
+  z-index: 10000 !important;
+
+}
 
 .search input{
+  position: absolute;
   opacity: 80%;
   padding: 0.5rem;
   font-size: 1.5rem;
@@ -79,6 +84,9 @@ span img{
 
 .search input:focus{
   border: solid yellow;  
+  z-index: 10000 !important;
+  display: block !important;
+
 }
 
 
