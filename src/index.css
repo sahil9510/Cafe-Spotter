@@ -105,12 +105,22 @@ span img{
     position: absolute;
     left: 50%;
     top: 15%;
-    opacity: 90%;
     transform: translateX(-50%);
     width: 60%;
     max-width: 400px;
-    z-index: 2;
-    
+
+    z-index: 10000 !important;
+    display: block !important;
+  }
+
+  .search input{
+    position: absolute;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    width: 100%;
+    z-index: 10000 !important;
+    display: block !important;
+  
   }
 
   h1{
