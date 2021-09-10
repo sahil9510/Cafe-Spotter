@@ -93,6 +93,13 @@ function App() {
     console.log(resultsRecieved[0]);
   }, []);
 
+  const panTo = useCallback(({ lat, lng }) => {
+    mapRef.current.panTo({ lat, lng });
+    mapRef.current.setZoom(15);
+    setMarker({lat,lng,time: new Date()});
+    nearbySearch({lat,lng})
+  }, [nearbySearch]);
+
 
 
   const onMapClick = useCallback((event) => {
@@ -101,8 +108,9 @@ function App() {
       lng: event.latLng.lng(),
       time: new Date(),
     });
+    panTo({lat: event.latLng.lat(),lng :event.latLng.lng()});
     nearbySearch({lat:event.latLng.lat(),lng:event.latLng.lng()})
-  }, [nearbySearch]);
+  }, [nearbySearch,panTo]);
 
   const mapRef = useRef();
   const onMapLoad = useCallback((map) => {
@@ -112,12 +120,7 @@ function App() {
     mapRef.current = map;
   }, [nearbySearch]);
 
-  const panTo = useCallback(({ lat, lng }) => {
-    mapRef.current.panTo({ lat, lng });
-    mapRef.current.setZoom(14);
-    setMarker({lat,lng,time: new Date()});
-    nearbySearch({lat,lng})
-  }, [nearbySearch]);
+
 
 
   if (loadError) return "Error Loading Maps";
@@ -160,6 +163,7 @@ function App() {
               anchor: new window.google.maps.Point(17.5, 17.5), 
             }}
             onClick={() => {
+
               setSelected(result);
             }}
           />
