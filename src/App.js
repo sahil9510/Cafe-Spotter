@@ -228,9 +228,9 @@ const Search = ({ panTo }) => {
   });
 
   return (
-    <div className="search">
+    <div className="search zIndex">
       <Combobox 
-        onSelect={async (address) => {
+         className="zIndex" onSelect={async (address) => {
           setValue(address, false);
           clearSuggestions();
           try {
@@ -244,6 +244,7 @@ const Search = ({ panTo }) => {
         }}
       >
         <ComboboxInput
+          className="zIndex"
           onClick={()=>{
             setValue("",false)}}
           value={value}
@@ -253,11 +254,12 @@ const Search = ({ panTo }) => {
           disabled={!ready}
           placeholder="Enter an address"
         />
-        <ComboboxPopover portal={false}> 
-          <ComboboxList>
+        <ComboboxPopover className="zIndex"
+        portal={false}> 
+          <ComboboxList className="zIndex" >
             {status === "OK" &&
               data.map(({ id, description }) => (
-                <ComboboxOption
+                <ComboboxOption className="zIndex"
                   key={Math.random().toString()}
                   value={description}
 
