@@ -29,11 +29,8 @@ import { useCallback, useRef, useState } from "react";
 
 let mapStyles;
 const currentHour = new Date().getHours();
-if (currentHour > 18 || currentHour < 6) {
-  mapStyles = nightMapStyles;
-} else {
-  mapStyles = dayMapStyles;
-}
+const isNight= currentHour >= 18 || currentHour < 6
+mapStyles=isNight? nightMapStyles : dayMapStyles;
 
 const libraries = ["places"];
 const mapContainerStyle = {
@@ -51,6 +48,8 @@ const options = {
   disableDefaultUI: true,
   zoomControl: true,
 };
+
+
 
 function App() {
   const { isLoaded, loadError } = useLoadScript({
@@ -75,8 +74,26 @@ function App() {
     );
     const data = await response.json();
     const resultsRecieved = await data.results;
+    resultsRecieved.forEach(result => {
+      if(result.types[0]==="restaurant" || result.types[0]==="meal_delivery" || result.types[0]==="meal_takeaway"  || result.types[1]==="restaurant"  || result.types[0]==="bakery" ){
+        result.icon ="tableware.png";
+      }
+      else if(result.types[0]==="cafe"){
+        result.icon="coffee.png";
+      }
+      else if(result.types[0]==="food"){
+        result.icon="shopping-bags.png"
+      }
+      else if(result.types[0]==="bar" || result.types[0]==="night_club"){
+        result.icon="champagne.png"
+      }
+
+    });
     setResults(resultsRecieved);
+    console.log(resultsRecieved[0]);
   }, []);
+
+
 
   const onMapClick = useCallback((event) => {
     setMarker({
@@ -129,17 +146,18 @@ function App() {
 
 
         {results.map((result) => (
-          <Marker
+          <Marker style={`background-color: ${result.icon_background_color}`}
             key={result.place_id}
             position={{
               lat: result.geometry.location.lat,
               lng: result.geometry.location.lng,
             }}
+            animation={2}
             icon={{
               url: result.icon,
-              scaledSize: new window.google.maps.Size(30, 30),
+              scaledSize: new window.google.maps.Size(35, 35),
               origin: new window.google.maps.Point(0, 0),
-              anchor: new window.google.maps.Point(15, 15),
+              anchor: new window.google.maps.Point(17.5, 17.5), 
             }}
             onClick={() => {
               setSelected(result);
@@ -148,13 +166,14 @@ function App() {
         ))}
 
         {marker && <Marker
+          
           key={marker.time.toISOString()}
           position={{ lat: marker.lat, lng: marker.lng }}
           icon={{
-            url: "./person.png",
-            scaledSize: new window.google.maps.Size(40, 40),
+            url: "./person (1).png",
+            scaledSize: new window.google.maps.Size(60, 60),
             origin: new window.google.maps.Point(0, 0),
-            anchor: new window.google.maps.Point(20, 20),
+            anchor: new window.google.maps.Point(30, 30),
           }}
 
         />}
@@ -180,7 +199,7 @@ function App() {
         
       </GoogleMap>
       <Search panTo={panTo} />
-      <code>v0.9 ^BETA^</code>
+      <code>v0.91 ^BETA^</code>
     </div>
   );
 }
@@ -206,7 +225,7 @@ const Locate = ({ panTo }) => {
         });
       }}
     >
-      <img src="compass.png" alt="compass-locate me" />
+      <img src="position.png" alt="compass-locate me" />
     </button>
   );
 };

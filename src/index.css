@@ -87,14 +87,18 @@ span img{
 .locate{
   position: absolute;
   top: 2rem;
-  right: 1rem;
+  right: 2rem;
   background: none;
   border:none;
   z-index: 2;
+
 }
 
 .locate img{
-  width: 45px;
+  border: solid black;
+  border-radius: 100%;
+  padding: 0;
+  width: 60px;
   cursor: pointer;
 }
 
@@ -124,17 +128,17 @@ span img{
   }
 
   h1{
-    margin-left: 22%;
+    margin-left: 19%;
     padding: 2% 3% 2%;
   }
 
   .locate{
 
     top: 85%;
-    right: 82%;
+    right: 80%;
   }
 
   .locate img{
-    width: 45px;
+    width: 50px;
   }
 }
