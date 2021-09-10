@@ -187,7 +187,7 @@ function App() {
           >
             <div>
               <h2>{selected.name}</h2>
-              <h4>{selected.opening_hours.open_now? "OPEN": "CLOSED"}</h4>
+              {selected.opening_hours && <h4>{selected.opening_hours.open_now? "OPEN": "CLOSED"}</h4>}
               <p>
                 Rating: <strong>{selected.rating}</strong>
               </p>
