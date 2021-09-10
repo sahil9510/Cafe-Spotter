@@ -43,7 +43,10 @@ span img{
   top: 8px;
 
 }
-
+.pac-container {  
+  z-index: 10000 !important;
+  display: block !important;
+}
 
 
 .search{
@@ -55,7 +58,7 @@ span img{
   width: 100%;
   max-width: 400px;
   z-index: 10000 !important;
-  
+  display: block !important;
 }
 
 
