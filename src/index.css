@@ -53,7 +53,6 @@ span img{
   position: absolute;
   left: 50%;
   top: 18%;
-  opacity: 80%;
   transform: translateX(-50%);
   width: 100%;
   max-width: 400px;
@@ -62,9 +61,11 @@ span img{
 }
 
 .zIndex{
-  z-index: 10000 !important;
   display: block !important;
+  z-index: 10000 !important;
 }
+
+::ng-deep .pac-container { position: fixed !important;}
 
 .search input{
   opacity: 80%;
