@@ -54,7 +54,7 @@ const options = {
 
 function App() {
   const { isLoaded, loadError } = useLoadScript({
-    googleMapsApiKey: process.env.REACT_APP_API,
+    googleMapsApiKey: "AIzaSyD8UdNL4Lr2_dGvtEGn7oV8DNP05q3GtLU",
     libraries,
   });
 
@@ -68,7 +68,7 @@ function App() {
         lat.toString() +
         "," +
         lng.toString() +
-        "&radius=2000&radius=10000&keyword=cafe&key="+process.env.REACT_APP_API,
+        "&radius=2000&radius=10000&keyword=cafe&key=AIzaSyD8UdNL4Lr2_dGvtEGn7oV8DNP05q3GtLU",
       {
         method: "get",
       }
