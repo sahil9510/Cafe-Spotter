@@ -68,7 +68,7 @@ function App() {
         lat.toString() +
         "," +
         lng.toString() +
-        "&radius=2000&radius=10000&keyword=cafe&key=AIzaSyD8UdNL4Lr2_dGvtEGn7oV8DNP05q3GtLU",
+        "&radius=10000&keyword=cafe&key=AIzaSyD8UdNL4Lr2_dGvtEGn7oV8DNP05q3GtLU",
       {
         method: "get",
       }
