@@ -7,7 +7,7 @@
 <div align="center">
 <h1 style="font-size: 5rem">Café Spotter</h1>
 
-Love Coffee? Want to find café and restaraunts near you quickly? Use Café Spotter to do so.
+Love Coffee? Want to find cafés and restaurants near you quickly? Use Café Spotter to do so.
 
 <img src="./public/readme/cafeLogo.png">
 </div>
@@ -72,8 +72,7 @@ Use this app to find the nearest local cafes, bars and restaurants at any locati
 ### On Load Window
 <img src="./public/readme/Capture.PNG"/>
 <br/>
-<br/>
-<br/>
+
 <div style="text-align: left;">
 <h3 style="display:inline-block">Search any place you want to</h3>
 
@@ -81,19 +80,18 @@ Use this app to find the nearest local cafes, bars and restaurants at any locati
 
 </div>
 
-<br/>
-<div style="text-align: center;">
+
+<div >
 <h3 style="display:inline-block">Or go to your location</h3>
 
 <img  width="150px" height="150px" src="./public/readme/Capture2.PNG"/>
 
 </div>
 
-<br/>
-<div style="text-align: right;">
-<h3 style="display:inline-block">Know about the place before visiting</h3>
+<div style=>
 
 <img  width="300px" height="150px" src="./public/readme/Capture3.PNG"/>
+<h3 style="display:inline-block">Know about the place before visiting</h3>
 
 </div>
 
