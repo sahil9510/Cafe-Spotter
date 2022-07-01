@@ -63,7 +63,7 @@ function App() {
 
   const nearbySearch = useCallback(async ({ lat, lng }) => {
     const response = await fetch(
-      "https://cors-anywhere65.herokuapp.com//https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" +
+      "https://cors-anywhere65.herokuapp.com/https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" +
         lat.toString() +
         "," +
         lng.toString() +
