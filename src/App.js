@@ -1,4 +1,4 @@
-// https://thawing-cove-80784.herokuapp.com/
+
 import dayMapStyles from "./dayMapStyles";
 import nightMapStyles from "./nightMapStyles";
 import {
@@ -53,7 +53,7 @@ const options = {
 
 function App() {
   const { isLoaded, loadError } = useLoadScript({
-    googleMapsApiKey: "AIzaSyDVZA7fUR_moMbcupIBbXm8Y2KPYugGTw0",
+    googleMapsApiKey: process.env.REACT_APP_API,
     libraries,
   });
 
@@ -67,7 +67,7 @@ function App() {
         lat.toString() +
         "," +
         lng.toString() +
-        "&radius=2000&keyword=cafe&key=AIzaSyDVZA7fUR_moMbcupIBbXm8Y2KPYugGTw0",
+        "&radius=2000&keyword=cafe&key="+process.env.REACT_APP_API,
       {
         method: "get",
       }

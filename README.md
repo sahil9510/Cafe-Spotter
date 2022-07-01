@@ -1,70 +1,116 @@
-# Getting Started with Create React App
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div align="center">
+<h1 style="font-size: 5rem">Café Spotter</h1>
 
-## Available Scripts
+Love Coffee? Want to find café and restaraunts near you quickly? Use Café Spotter to do so.
 
-In the project directory, you can run:
+<img src="./public/readme/cafeLogo.png">
+</div>
 
-### `npm start`
+## Demo
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+A demp of this project can be found on this [link](https://cafe-spotter.vercel.app/)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<br/>
 
-### `npm test`
+## Built With
+- [ReactJS](https://reactjs.org/)
+- [Google Maps API](https://developers.google.com/maps)
+- [Google Place AutoComplete](https://developers.google.com/maps/documentation/places/web-service/autocomplete)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<br/>
 
-### `npm run build`
+# Getting Started
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Prerequisites
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- npm
+```
+npm install npm@latest -g
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Installation
 
-### `npm run eject`
+1. Clone the repository to your local machine.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```
+git clone https://github.com/sahil9510/cafe-spotter.git
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. Install the required dependencies. (Make sure you have node or yarn installed)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```
+npm install
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+3. Get your API Key from [here](https://developers.google.com/maps)
 
-## Learn More
+4. Enter your key in `.env.local`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```js
+REACT_APP_API= `Your Key Here`
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+5.Runs the app in the development mode.\
+```
+Open http://localhost:3000 to view it in the browser.
+```
 
-### Code Splitting
+# Usage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Use this app to find the nearest local cafes, bars and restaurants at any location.
 
-### Analyzing the Bundle Size
+## Screenshots
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+<br/>
 
-### Making a Progressive Web App
+### On Load Window
+<img src="./public/readme/Capture.PNG"/>
+<br/>
+<br/>
+<br/>
+<div style="text-align: left;">
+<h3 style="display:inline-block">Search any place you want to</h3>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+<img  width="300px" src="./public/readme/Capture1.PNG"/>
 
-### Advanced Configuration
+</div>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+<br/>
+<div style="text-align: center;">
+<h3 style="display:inline-block">Or go to your location</h3>
 
-### Deployment
+<img  width="150px" height="150px" src="./public/readme/Capture2.PNG"/>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+</div>
 
-### `npm run build` fails to minify
+<br/>
+<div style="text-align: right;">
+<h3 style="display:inline-block">Know about the place before visiting</h3>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<img  width="300px" height="150px" src="./public/readme/Capture3.PNG"/>
+
+</div>
+
+
+# Contact
+Sahil Srivastava - [@srivastv_Sahil](https://twitter.com/srivastv_Sahil) - [srivastavasahil133@gmail.com](mailto:srivastavasahil133@gmail.com)
+
+Project Link: [github.com/sahil9510/cafe-spotter.git](https://github.com/sahil9510/cafe-spotter.git)
+
+
+[contributors-shield]: https://img.shields.io/github/contributors/sahil9510/cafe-spotter.svg?style=for-the-badge
+[contributors-url]: https://github.com/sahil9510/cafe-spotter/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/sahil9510/cafe-spotter.svg?style=for-the-badge
+[forks-url]: https://github.com/sahil9510/cafe-spotter/network/members
+[stars-shield]: https://img.shields.io/github/stars/sahil9510/cafe-spotter.svg?style=for-the-badge
+[stars-url]: https://github.com/sahil9510/cafe-spotter/stargazers
+[issues-shield]: https://img.shields.io/github/issues/sahil9510/cafe-spotter.svg?style=for-the-badge
+[issues-url]: https://github.com/sahil9510/cafe-spotter/issues
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://www.linkedin.com/in/sahil-srivastava-1a0564138/
