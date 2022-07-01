@@ -80,18 +80,18 @@ Use this app to find the nearest local cafes, bars and restaurants at any locati
 
 </div>
 
-
+<br/>
 <div >
 <h3 style="display:inline-block">Or go to your location</h3>
 
 <img  width="150px" height="150px" src="./public/readme/Capture2.PNG"/>
 
 </div>
+<br/>
+<div>
 
-<div style=>
-
-<img  width="300px" height="150px" src="./public/readme/Capture3.PNG"/>
 <h3 style="display:inline-block">Know about the place before visiting</h3>
+<img  width="300px" height="150px" src="./public/readme/Capture3.PNG"/>
 
 </div>
 
