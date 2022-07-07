@@ -14,7 +14,7 @@ Love Coffee? Want to find cafés and restaurants near you quickly? Use Café Spo
 
 ## Demo
 
-A demp of this project can be found on this [link](https://cafe-spotter.vercel.app/)
+A demo of this project can be found on this [link](https://cafe-spotter.vercel.app/)
 
 <br/>
 
